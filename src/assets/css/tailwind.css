@@ -1,0 +1,104 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+.fontH1 {
+	font-size: 52px;
+	font-weight: 100;
+	line-height: 64px;
+	letter-spacing: 0.2px;
+}
+
+.fontH2 {
+	font-size: 44px;
+	font-weight: 500;
+	line-height: 54px;
+	letter-spacing: 0px;
+}
+
+.fontH3 {
+	font-size: 32px;
+	font-weight: 600;
+	line-height: 40px;
+	letter-spacing: 0.1px;
+}
+
+.fontH4 {
+	font-size: 26px;
+	font-weight: 500;
+	line-height: 32px;
+	letter-spacing: 0.2px;
+}
+
+.fontH5 {
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 26px;
+	letter-spacing: 0.2px;
+}
+
+.fontH6 {
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 24px;
+	letter-spacing: 0.2px;
+}
+
+.fontSub1 {
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 24px;
+	letter-spacing: 0.1px;
+}
+
+.fontSub2 {
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 18px;
+	letter-spacing: 0.1px;
+}
+
+.fontBody1 {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	letter-spacing: 0.1px;
+}
+.fontBody2 {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 22px;
+	letter-spacing: 0.1px;
+}
+.fontSmall1 {
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 16px;
+	letter-spacing: 0.2px;
+}
+.fontSmall2 {
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 16px;
+	letter-spacing: 0.1px;
+}
+.fontSmall3 {
+	font-size: 11px;
+	font-weight: 400;
+	line-height: 14px;
+	letter-spacing: 0.1px;
+}
+.fontBtn {
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 18px;
+	letter-spacing: 0.2px;
+}
+.fontInit {
+	font-size: 13px;
+	font-weight: 600;
+	line-height: 16px;
+	letter-spacing: 0.2px;
+}

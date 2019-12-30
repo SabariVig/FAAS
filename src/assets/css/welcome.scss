@@ -1,0 +1,45 @@
+.welcome-bg{
+    background: linear-gradient(145.49deg, #41517D 18.98%, #080E1E 99.9%, #080E1E 99.9%);
+    overflow: hidden;
+}
+.welcome-contanier{
+    line-height: 122px;
+    font-size: 7.5rem;
+    // margin-top: 20%;
+    letter-spacing: 7px;
+    line-height: 95px;
+}
+
+
+.svg:nth-child(even){
+    fill: #57A7F9!important;
+}
+
+    
+    .svg:nth-child(1)
+    {
+        fill: #38AE7F; 
+        transform: translate3d(random(1200)*1px,-(random(855)*1px),0px);
+    }
+    .svg:nth-child(2)
+    {
+        fill: #38AE7F; 
+        transform: translate3d(random(1200)*1px,-(random(855)*1px),0px);
+    }
+    .svg:nth-child(3)
+    {
+        fill: #38AE7F; 
+        transform: translate3d(random(1200)*1px,-(random(855)*1px),0px);
+    }
+    .svg:nth-child(4)
+    {
+        fill: #38AE7F; 
+        transform: translate3d(random(1200)*1px,-(random(855)*1px),0px);
+    }
+    .svg:nth-child(5)
+    {
+        fill: #38AE7F; 
+        transform: translate3d(random(1200)*1px,-(random(855)*1px),0px);
+    }
+
+
