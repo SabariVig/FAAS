@@ -1,7 +1,7 @@
 import React from 'react'
 // import '../../assets/css/ui.scss'
 
-const Textbox = ({ placeholder, name, type, boxStyle, labelStyle }) => {
+const Textbox = ({ placeholder, name, type, boxStyle, labelStyle, ref }) => {
 	return (
 		<div className='textbox '>
 			<label className={`${labelStyle} block  mt-8 `}>{placeholder}</label>
@@ -11,6 +11,7 @@ const Textbox = ({ placeholder, name, type, boxStyle, labelStyle }) => {
 				placeholder={placeholder}
 				type={type}
 				id={name}
+				ref={ref}
 			/>
 		</div>
 	)

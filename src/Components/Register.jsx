@@ -2,14 +2,75 @@ import React from 'react'
 import Button from './UI/Button'
 import Textbox from './UI/Textbox'
 import { Link } from 'react-router-dom'
+//import { useForm, Controller } from 'react-hook-form'
 const Register = ({ method, action }) => {
+	// const { register, handleSubmit } = useForm()
+	// const onSubmit = (data) => {
+	// 	alert(data)
+	// }
+	// return (
+	// 	<form className='mt-32' onSubmit={handleSubmit(onSubmit)}>
+	// 		<div className='w-1/2 mx-auto'>
+	// 			<Controller
+	// 				as={<Textbox />}
+	// 				control={register}
+	// 				type='text'
+	// 				placeholder='Name'
+	// 				name='name'
+	// 				labelStyle='fontSub1 font-bold'
+	// 				boxStyle=''
+	// 			/>
+	// 			<Controller
+	// 				as={<Textbox />}
+	// 				control={register}
+	// 				type='text'
+	// 				placeholder='Email'
+	// 				name='email'
+	// 				labelStyle='fontSub1 font-bold'
+	// 				boxStyle=''
+	// 			/>
+	// 			<Controller
+	// 				as={<Textbox />}
+	// 				control={register}
+	// 				type='password'
+	// 				placeholder='Password'
+	// 				name='password'
+	// 				labelStyle='fontSub1 font-bold'
+	// 			/>
+	// 			<Controller
+	// 				as={<Textbox />}
+	// 				control={register}
+	// 				type='password'
+	// 				placeholder='Confirm Password'
+	// 				name='confpassword'
+	// 				labelStyle='fontSub1 font-bold'
+	// 			/>
+	// 			<div className='flex w-1/2'>
+	// 				<div className=' '>
+	// 					<Button type='submit' value='Register' name='loginbtn' className='mt-10 fontH6 font-bold' />
+	// 				</div>
+	// 			</div>
+	// 			<div className=' fontSub1 font-bold my-3'>
+	// 				Do You Already Have An Account?
+	// 				<Link to='/login' className=' ml-1 text-primary-light'>
+	// 					Login
+	// 				</Link>
+	// 			</div>
+	// 		</div>
+	// 	</form>
+	// )
 	return (
 		<form className='mt-32'>
 			<div className='w-1/2 mx-auto'>
 				<Textbox type='text' placeholder='Name' name='name' labelStyle='fontSub1 font-bold' boxStyle='' />
 				<Textbox type='text' placeholder='Email' name='email' labelStyle='fontSub1 font-bold' boxStyle='' />
 				<Textbox type='password' placeholder='Password' name='password' labelStyle='fontSub1 font-bold' />
-				<Textbox type='password' placeholder='Confirm Password' name='confpassword' labelStyle='fontSub1 font-bold' />
+				<Textbox
+					type='password'
+					placeholder='Confirm Password'
+					name='confpassword'
+					labelStyle='fontSub1 font-bold'
+				/>
 				<div className='flex w-1/2'>
 					<div className=' '>
 						<Button type='submit' value='Register' name='loginbtn' className='mt-10 fontH6 font-bold' />
