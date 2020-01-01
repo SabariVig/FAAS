@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 // import '../../assets/css/ui.scss'
 
-const Textbox = ({ placeholder, name, type, boxStyle, labelStyle, ref }) => {
+const Textbox = ({ placeholder, name, type, boxStyle, labelStyle }, ref) => {
 	return (
 		<div className='textbox '>
 			<label className={`${labelStyle} block  mt-8 `}>{placeholder}</label>
@@ -16,5 +16,6 @@ const Textbox = ({ placeholder, name, type, boxStyle, labelStyle, ref }) => {
 		</div>
 	)
 }
+const textref = forwardRef(Textbox)
 
-export default Textbox
+export default textref

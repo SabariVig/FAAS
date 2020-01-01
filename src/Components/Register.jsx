@@ -2,78 +2,74 @@ import React from 'react'
 import Button from './UI/Button'
 import Textbox from './UI/Textbox'
 import { Link } from 'react-router-dom'
-//import { useForm, Controller } from 'react-hook-form'
+import { useForm } from 'react-hook-form'
+import * as yup from 'yup'
+
+const Schema = yup.object().shape({
+	email: yup.string().email('Enter A Vaild Email').required('Email Is Required'),
+	name: yup.string("Name Must Be String").required("Name Is Required"),
+	password: yup.string().min(8,"Password Must Atleast Contain 8 Characters").max(255).required("Passowrd Is Required"),
+	confpassword:yup.string().oneOf([yup.ref("password"), null], "Passwords Must Match").required("Password  is required")
+})
+
 const Register = ({ method, action }) => {
-	// const { register, handleSubmit } = useForm()
-	// const onSubmit = (data) => {
-	// 	alert(data)
-	// }
-	// return (
-	// 	<form className='mt-32' onSubmit={handleSubmit(onSubmit)}>
-	// 		<div className='w-1/2 mx-auto'>
-	// 			<Controller
-	// 				as={<Textbox />}
-	// 				control={register}
-	// 				type='text'
-	// 				placeholder='Name'
-	// 				name='name'
-	// 				labelStyle='fontSub1 font-bold'
-	// 				boxStyle=''
-	// 			/>
-	// 			<Controller
-	// 				as={<Textbox />}
-	// 				control={register}
-	// 				type='text'
-	// 				placeholder='Email'
-	// 				name='email'
-	// 				labelStyle='fontSub1 font-bold'
-	// 				boxStyle=''
-	// 			/>
-	// 			<Controller
-	// 				as={<Textbox />}
-	// 				control={register}
-	// 				type='password'
-	// 				placeholder='Password'
-	// 				name='password'
-	// 				labelStyle='fontSub1 font-bold'
-	// 			/>
-	// 			<Controller
-	// 				as={<Textbox />}
-	// 				control={register}
-	// 				type='password'
-	// 				placeholder='Confirm Password'
-	// 				name='confpassword'
-	// 				labelStyle='fontSub1 font-bold'
-	// 			/>
-	// 			<div className='flex w-1/2'>
-	// 				<div className=' '>
-	// 					<Button type='submit' value='Register' name='loginbtn' className='mt-10 fontH6 font-bold' />
-	// 				</div>
-	// 			</div>
-	// 			<div className=' fontSub1 font-bold my-3'>
-	// 				Do You Already Have An Account?
-	// 				<Link to='/login' className=' ml-1 text-primary-light'>
-	// 					Login
-	// 				</Link>
-	// 			</div>
-	// 		</div>
-	// 	</form>
-	// )
+	const { register, handleSubmit, errors } = useForm({
+		validationSchema: Schema,
+		mode: "onChange",
+	})
+	const onSubmit = (data) => {
+		console.log(data)
+		// console.log(errors)
+	}
 	return (
 		<form className='mt-32'>
 			<div className='w-1/2 mx-auto'>
-				<Textbox type='text' placeholder='Name' name='name' labelStyle='fontSub1 font-bold' boxStyle='' />
-				<Textbox type='text' placeholder='Email' name='email' labelStyle='fontSub1 font-bold' boxStyle='' />
-				<Textbox type='password' placeholder='Password' name='password' labelStyle='fontSub1 font-bold' />
+				<Textbox
+					type='name'
+					placeholder='Name'
+					ref={register}
+					name='name'
+					boxStyle=''
+					labelStyle='fontSub1 font-bold'
+				/>
+				{errors.name && <h1>{errors.name.message}</h1>}
+				<Textbox
+					type='email'
+					placeholder='Email'
+					ref={register}
+					name='email'
+					boxStyle=''
+					labelStyle='fontSub1 font-bold'
+				/>
+				{errors.email && <h1>{errors.email.message}</h1>}
+				<Textbox
+					type='password'
+					placeholder='Password'
+					ref={register}
+					name='password'
+					boxStyle=''
+					labelStyle='fontSub1 font-bold'
+				/>
+				{errors.password && <h1>{errors.password.message}</h1>}
 				<Textbox
 					type='password'
 					placeholder='Confirm Password'
+					ref={register}
 					name='confpassword'
+					boxStyle=''
 					labelStyle='fontSub1 font-bold'
 				/>
+				{errors.confpassword && <h1>{errors.confpassword.message}</h1>}
+
 				<div className='flex w-1/2'>
 					<div className=' '>
-						<Button type='submit' value='Register' name='loginbtn' className='mt-10 fontH6 font-bold' />
+						<Button
+							type='submit'
+							onClick={handleSubmit(onSubmit)}
+							value='Register'
+							name='loginbtn'
+							className='mt-10 fontH6 font-bold'
+						/>
 					</div>
 				</div>
 				<div className=' fontSub1 font-bold my-3'>

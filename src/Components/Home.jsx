@@ -2,7 +2,7 @@ import React from 'react'
 import Login from './Login'
 import Welcome from './Welcome'
 import Register from './Register'
-import { Switch, Route, Link } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 const Home = () => {
 	return (
 		<div>

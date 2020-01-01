@@ -3,10 +3,12 @@ const app = express()
 const mongoose = require('mongoose')
 const User = require('./Models/User')
 const Auth = require("./Routes/Auth")
+const cors=require('cors')
+
 
 
 app.use(express.json())
-
+app.use(cors())
 mongoose.connect(
 	'mongodb+srv://Node:yormotherizgey@faas-j6cxt.mongodb.net/faas?retryWrites=true&w=majority',
 	{ useNewUrlParser: true, useUnifiedTopology: true },
